@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* Include the CSS here */
+        body {
+            font-family: 'Alata', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20px;
+            width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-family: var(--font-family);
+        }
+
+        #gallery {
+            padding: 20px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            justify-items: center;
+        }
+
+        .gallery-item {
+            border: 2px solid #444;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gallery-item p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .gallery-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .gallery-button:hover {
+            background-color: #333;
+        }
+
+        .hidden {
+            display: grid;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./images/logo.png" alt="Artistic Expressions Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#" id="view-gallery" class="gallery-button">View Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About the Artist</h2>
+        <p>Jane Doe is a contemporary painter known for her vibrant and expressive works. Her art explores the beauty of nature and the human experience through bold colors and dynamic compositions.</p>
+    </section>
+
+    <section id="gallery" class="hidden">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="./images/logo.png" alt="Artwork 1">
+                <p>Title: Sunrise Symphony</p>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/logo.png" alt="Artwork 2">
+                <p>Title: Nature's Whisper</p>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/logo.png" alt="Artwork 3">
+                <p>Title: Urban Vibes</p>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/logo.png" alt="Artwork 4">
+                <p>Title: Serene Skies</p>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/logo.png" alt="Artwork 5">
+                <p>Title: Ocean's Embrace</p>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/logo.png" alt="Artwork 6">
+                <p>Title: Mountain Majesty</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch or inquire about a piece, please fill out the form below:</p>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jane Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('view-gallery').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            var gallerySection = document.getElementById('gallery');
+            gallerySection.classList.toggle('hidden'); // Toggle the visibility of the gallery section
+        });
+    </script>
+</body>
+</html>

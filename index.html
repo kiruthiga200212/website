@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting Artist Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+<body>
+    
+
+    <header>
+        <img src="./images/logo.png" alt="Artistic Expressions Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a class="m_tag" href="login.html"><i class="fa fa-lock"></i> Sign In</a></li>
+				<li><a class="m_tag" href="contact.html"><i class="fa fa-phone"></i> Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+    <div class="slider">
+        <div class="images">
+            <input type="radio" name="slide" id="img1" checked>
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+            <input type="radio" name="slide" id="img4">
+
+            <img src="./images/bg-slide_1.png" class="m1" alt="img1">
+            <img src="./images/bg-slide_2.png" class="m2" alt="img2">
+            <img src="./images/bg-slide_3.png" class="m3" alt="img3">
+            <img src="./images/bg-slide_2.png" class="m4" alt="img4">
+        </div>
+        <div class="dots">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+            <label for="img4"></label>
+        </div>
+    </div>
+    <div class="transparent">
+        <h1>protrait Artist</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, corporis error! Ipsum nesciunt, itaque molestiae ea aliquam cupiditate fuga quis</p>
+    </div>
+</section>
+
+
+    <section class="about-main">
+        <h2 class="about">About the Artist</h2>
+        <p class="about">Jane Doe is a contemporary painter known for her vibrant and expressive works. Her art explores the beauty of nature and the human experience through bold colors and dynamic compositions.</p>
+    </section>
+<div class="gallery">
+    <a class ="view" href="./gallery.html">Viwe gallery</a>
+</div>
+    <section id="new-sale">
+        <h2>New Sale</h2>
+        <div class="sale-container">
+            <div class="sale-item">
+                <img src="./images/sale_1.jpg" alt="Artwork on Sale">
+                <p>Title: Autumn Bliss - 30% off</p>
+                <p class="price"><del>$300</del> $210</p>
+            </div>
+            <div class="sale-item">
+                <img src="./images/sale_2.jpg" alt="Artwork on Sale">
+                <p>Title: Dreamy Horizon - 20% off</p>
+                <p class="price"><del>$250</del> $200</p>
+            </div>
+            <div class="sale-item">
+                <img src="./images/sale_2.jpg" alt="Artwork on Sale">
+                <p>Title: Dreamy Horizon - 20% off</p>
+                <p class="price"><del>$250</del> $200</p>
+            </div>
+            <div class="sale-item">
+                <img src="./images/sale_2.jpg" alt="Artwork on Sale">
+                <p>Title: Dreamy Horizon - 20% off</p>
+                <p class="price"><del>$250</del> $200</p>
+            </div>
+            <div class="sale-item">
+                <img src="./images/sale_2.jpg" alt="Artwork on Sale">
+                <p>Title: Dreamy Horizon - 20% off</p>
+                <p class="price"><del>$250</del> $200</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="happy-client">
+        <h2>Happy Clients</h2>
+        <div class="client-container">
+            <div class="client-item">
+                <img src="./images/client1.jpg" alt="Client Testimonial">
+                <blockquote>
+                    "The painting perfectly captures the essence of nature. It's a masterpiece that brings serenity to our home."
+                </blockquote>
+                <p class="client-name">- Alex Johnson</p>
+            </div>
+            <div class="client-item">
+                <img src="./images/client2.jpg" alt="Client Testimonial">
+                <blockquote>
+                    "Absolutely in love with the artwork! The colors and composition are stunning. Highly recommend this artist."
+                </blockquote>
+                <p class="client-name">- Emily Watson</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch or inquire about a piece, please fill out the form below:</p>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <!-- Popup Structure -->
+    <div class="popup-background" id="login-popup">
+        <div class="popup-content">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <button class="popup-close" id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the popup display
+        window.onload = function() {
+            document.getElementById('login-popup').style.display = 'block';
+        };
+
+        document.getElementById('close-popup').onclick = function() {
+            document.getElementById('login-popup').style.display = 'none';
+        };
+        //view gallery 
+        document.getElementById('view-gallery').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            var gallerySection = document.getElementById('gallery');
+            gallerySection.classList.toggle('hidden'); // Toggle the visibility of the gallery section
+        });
+    </script>    
+    <footer>
+        <p>&copy; 2024 Jane Doe. All rights reserved.</p>
+        <address>
+            <p><strong>Studio Address:</strong></p>
+            <p>123 Art Lane,<br>
+            Creativity City, CC 12345</p>
+        </address>
+        <p>Email: <a href="mailto:janedoe@example.com">janedoe@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+    </footer>
+</body>
+</html>
